@@ -1,10 +1,9 @@
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
-import PreviewCard from "../../components/PreviewCard";
-import { Pokemon } from "../../model/Pokemon";
-import { constants } from "../../public/constants";
-import css from "../../styles/Home.module.css";
-import { useState } from "react";
+import PreviewCard from "../components/PreviewCard";
+import { Pokemon } from "../model/Pokemon";
+import { constants } from "../public/constants";
+import css from "../styles/Home.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const resp = await fetch(constants.API.index);
@@ -16,7 +15,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
 };
 
-const UseStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
+const NoStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
     return (
         <>
             <Head>
@@ -39,4 +38,4 @@ const UseStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
     );
 };
 
-export default UseStateHome;
+export default NoStateHome;

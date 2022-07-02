@@ -13,6 +13,9 @@ const Index: NextPage = () => {
                 <title>NextJS Rendering</title>
             </Head>
             <div className={css.main}>
+                <Link href={"/home/"}>
+                    <div className={css.jump}>No State</div>
+                </Link>
                 <Link href={"/use-state/home/"}>
                     <div className={css.jump}>useState</div>
                 </Link>

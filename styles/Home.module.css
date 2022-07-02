@@ -9,11 +9,26 @@
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 }
-/* 
-.card_grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 
-    gap: 1rem;
-} */
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.bar {
+    height: 2rem;
+    width: 100%;
+
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+
+    font-size: 1.2em;
+}
+
+.bar:focus {
+    outline: none;
+    filter: drop-shadow(0 0 0.5rem hsla(267, 100%, 80%, 0.5));
+}

@@ -16,7 +16,7 @@ export default function PreviewCard({ pokemon }: Props) {
                 <div className={css.name}>{pokemon.name}</div>
                 <div className={css.id}>#{pokemon.id}</div>
             </div>
-            <img src={`${baseUrl}${pokemon.url}`} alt="Image"></img>
+            <img src={`${baseUrl}${pokemon.image}`} alt="Image"></img>
         </div>
     );
 }
