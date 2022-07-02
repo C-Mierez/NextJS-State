@@ -4,7 +4,7 @@ import PreviewCard from "../../components/PreviewCard";
 import { Pokemon } from "../../model/Pokemon";
 import { constants } from "../../public/constants";
 import css from "../../styles/Home.module.css";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const resp = await fetch(constants.API.index);
@@ -17,6 +17,16 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 const UseStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
+    const [filter, setFilter] = useState("");
+
+    const filteredPokemon = useMemo(
+        () =>
+            pokemon.filter((p) =>
+                p.name.toLowerCase().includes(filter.toLowerCase())
+            ),
+        [filter, pokemon]
+    );
+
     return (
         <>
             <Head>
@@ -26,12 +36,14 @@ const UseStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
                 <input
                     className={css.bar}
                     type={"text"}
-                    value={""}
-                    onChange={() => {}}
+                    value={filter}
+                    onChange={(e) => {
+                        setFilter(e.target.value);
+                    }}
                 ></input>
             </div>
             <div className={css.card_grid}>
-                {(pokemon as Array<any>).slice(0, 20).map((pokemon, index) => {
+                {filteredPokemon.slice(0, 20).map((pokemon, index) => {
                     return <PreviewCard key={index} pokemon={pokemon} />;
                 })}
             </div>
