@@ -27,14 +27,8 @@ const UseStateHome: NextPage = ({
                 <title>useState</title>
             </Head>
             <div className={css.card_grid}>
-                {(pokemon as Array<any>).map((pokemon, index) => {
-                    return (
-                        <PreviewCard
-                            key={index}
-                            pokemon={pokemon}
-                            detailsUrl={`/serverside/${pokemon["id"]}`}
-                        />
-                    );
+                {(pokemon as Array<any>).slice(0, 20).map((pokemon, index) => {
+                    return <PreviewCard key={index} pokemon={pokemon} />;
                 })}
             </div>
         </>
