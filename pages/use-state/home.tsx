@@ -8,6 +8,12 @@ import PreviewCard from "../../components/PreviewCard";
 import { constants } from "../../public/constants";
 import css from "../../styles/Home.module.css";
 
+interface Pokemon {
+    id: number;
+    name: string;
+    image: string;
+}
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const resp = await fetch(constants.API.index);
 
@@ -18,9 +24,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
 };
 
-const UseStateHome: NextPage = ({
-    pokemon,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const UseStateHome = ({ pokemon }: { pokemon: Pokemon[] }) => {
     return (
         <>
             <Head>
