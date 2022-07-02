@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import constants from "../public/constants";
-import css from "../styles/Index.module.css";
-import PreviewCard from "../components/PreviewCard";
 import Link from "next/link";
+import css from "../styles/Index.module.css";
 
 const Index: NextPage = () => {
     return (
@@ -18,6 +15,9 @@ const Index: NextPage = () => {
                 </Link>
                 <Link href={"/use-state/home/"}>
                     <div className={css.jump}>useState</div>
+                </Link>
+                <Link href={"/context/home/"}>
+                    <div className={css.jump}>Context</div>
                 </Link>
             </div>
         </>
