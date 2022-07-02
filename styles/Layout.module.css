@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    background-color: hsla(267, 52%, 49%, 0.95);
+
+    text-align: center;
+    text-overflow: ellipsis;
+
+    padding: 1rem 1.5rem;
+
+    border-radius: 0 0 1rem 1rem;
+
+    z-index: 1;
+}
+
+.body {
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: inherit;
+
+        text-align: left;
+    }
+}

@@ -1,0 +1,43 @@
+.preview_card {
+    aspect-ratio: 1;
+    border-radius: 0.5em;
+
+    background-color: hsla(0, 0%, 100%, 0.055);
+
+    transition: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0.5em;
+
+    position: relative;
+}
+
+.preview_card:hover {
+    cursor: pointer;
+    background-color: hsla(0, 0%, 100%, 0.095);
+}
+
+.preview_card .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.preview_card .id {
+    font-weight: bold;
+}
+
+.preview_card img {
+    margin: 1em 0;
+    max-height: 85%;
+    max-width: 85%;
+
+    border-radius: 0.5em;
+
+    filter: brightness(0.8) grayscale(1);
+}
