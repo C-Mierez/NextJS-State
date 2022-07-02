@@ -1,18 +1,9 @@
-import type {
-    GetServerSideProps,
-    InferGetServerSidePropsType,
-    NextPage,
-} from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import PreviewCard from "../../components/PreviewCard";
+import { Pokemon } from "../../model/Pokemon";
 import { constants } from "../../public/constants";
 import css from "../../styles/Home.module.css";
-
-interface Pokemon {
-    id: number;
-    name: string;
-    image: string;
-}
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const resp = await fetch(constants.API.index);
