@@ -69,4 +69,11 @@ Data can then be accessed from the page using the same `useQuery` hook.
 > - The page doesn't care about what happened. If the data was **not** prefetched, it will fetch it during the `useQuery`.
 > - Doing multiple `prefetchQuery` becomes easier and cleaner, as they all get stored on the same `QueryClient`.
 
-### Redux
+### Redux Toolkit
+
+Redux is perhaps one of the approaches with the most boilerplate, but it makes for a really nice uni-directional state management solution.
+
+Boilerplate aside, the key aspect here is that we can create a `slice` which is going to manage a `PokemonState` and is gonna have different `reducers` which are gonna be called by the components. 
+
+In this case, since we had async data fetching, an `AsyncChunk` was created as well.
+
