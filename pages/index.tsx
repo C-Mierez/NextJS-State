@@ -7,7 +7,7 @@ const Index: NextPage = () => {
     return (
         <>
             <Head>
-                <title>NextJS Rendering</title>
+                <title>NextJS State</title>
             </Head>
             <div className={css.main}>
                 <Link href={"/home/"}>
