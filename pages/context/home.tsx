@@ -13,7 +13,7 @@ export default function ContextHome() {
     return (
         <>
             <Head>
-                <title>useState</title>
+                <title>Context</title>
             </Head>
             <div className={css.searchBar}>
                 <input
