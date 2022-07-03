@@ -92,3 +92,6 @@ We create a class `PokemonStore` to be the main store. This framework's approach
 Making use of `makeObservable`, we define `observable` properties and `computed` properties (which are essentially derived from the others). 
 
 And once this is done, it is just a matter of importing the store and interacting directly with it.
+
+### Jotai
+
