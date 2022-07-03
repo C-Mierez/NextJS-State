@@ -25,6 +25,9 @@ const Index: NextPage = () => {
                 <Link href={"/query-hydrate/home/"}>
                     <div className={css.jump}>React Query Hydrate</div>
                 </Link>
+                <Link href={"/redux/home/"}>
+                    <div className={css.jump}>Redux 😄</div>
+                </Link>
             </div>
         </>
     );
