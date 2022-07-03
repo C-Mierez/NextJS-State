@@ -82,3 +82,13 @@ In this case, since we had async data fetching, an `AsyncChunk` was created as w
 This is a really simple uni-directional data flow model. 
 
 Using the `create` function, we can define a new hook `usePokemonStore` in which we define (and type) the different attributes that we need, and initialize them. Additionally we define some setter functions such as `setPokemon` or `setFilter` in which we define the logic to follow when these changes are taking place.
+
+### MobX
+
+This is a bi-directional data flow model. You can set the data and observe it, while also being notified when the data changes.
+
+We create a class `PokemonStore` to be the main store. This framework's approach is much more Object-Oriented.
+
+Making use of `makeObservable`, we define `observable` properties and `computed` properties (which are essentially derived from the others). 
+
+And once this is done, it is just a matter of importing the store and interacting directly with it.
