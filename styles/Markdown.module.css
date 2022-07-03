@@ -55,6 +55,7 @@
     align-self: flex-start;
 
     font-size: 0.8em;
+    text-align: center;
 
     background-color: hsla(0, 0%, 100%, 0.025);
     border-radius: 1rem;
