@@ -32,7 +32,7 @@ export default function MarkdownHeader(props: Props) {
                     Search Bar that filters Pokemon per name.
                 </div>
                 <div className={css.readme_prompt} onClick={props.onClick}>
-                    Click here to check out the repository's README.md
+                    Click here to check out the repository README.md
                 </div>
             </div>
         </>
