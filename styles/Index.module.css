@@ -16,6 +16,7 @@
 
     transition: 0.2s;
 
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,6 +41,54 @@
     font-size: 1.8em;
 }
 
+.tooltip_button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1;
+    width: 12%;
+    border-radius: 50%;
+
+    background-color: hsla(0, 0%, 100%, 0.3);
+
+    transition: background-color 0.2s;
+
+    text-align: center;
+    font-size: 1em;
+}
+
+.tooltip_button:hover {
+    cursor: help;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.tooltip_button svg {
+    fill: white;
+    height: 70%;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 150%;
+
+    box-shadow: 0 0 0.5rem 0.5rem hsla(0, 0%, 100%, 0.15);
+    background-color: hsla(0, 0%, 100%, 0.15);
+    width: 250%;
+
+    overflow: hidden;
+
+    border-radius: 0.5rem;
+    padding: 0.5em;
+
+    font-size: small;
+    font-style: normal;
+}
+
 @media (min-width: 768px) {
     .main {
         grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
@@ -50,5 +99,12 @@
     .jump {
         width: 100%;
         aspect-ratio: unset;
+    }
+
+    .tooltip_button {
+        top: 0.5rem;
+        right: 0.5rem;
+
+        width: 1.5rem;
     }
 }
