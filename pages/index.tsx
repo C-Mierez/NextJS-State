@@ -38,7 +38,9 @@ const Index: NextPage = () => {
                     <div className={css.jump}>MobX</div>
                 </Link>
                 <Link href={"/jotai/home/"}>
-                    <div className={css.jump}>Jotai</div>
+                    <div className={css.jump}>
+                        Jotai<div>also fcking amazing???</div>
+                    </div>
                 </Link>
             </div>
         </>

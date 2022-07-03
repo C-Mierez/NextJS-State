@@ -95,3 +95,10 @@ And once this is done, it is just a matter of importing the store and interactin
 
 ### Jotai
 
+Jotai defined *Atoms* as a piece of data, that can be global or local, which we can then use granularly throughout the components.
+
+We create a `pokemonAtom` with the `atom()` function. Then, we can *hydrate* it from inside a component using `useHydrateAtoms` hook.
+
+Similarly, we define all other properties like `filterAtom` and `filteredPokemonAtom`, which can all be treated independently like normal. 
+
+*However*, we can create ***dependencies*** between these atoms, and these are handled automatically. So for `filteredPokemonAtom` we define it as a function whose logic depends on getting other atoms' data, which Jotai understands as a dependency.
