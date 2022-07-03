@@ -8,7 +8,7 @@ export default function LinkTooltip(props: Props) {
     return (
         <>
             <div className={css.tooltip}>
-                I was going to do a tooltip but I'm too lazy now
+                I was going to do a tooltip but I am too lazy now
                 <br />
                 😄
             </div>
