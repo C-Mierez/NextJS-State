@@ -77,3 +77,8 @@ Boilerplate aside, the key aspect here is that we can create a `slice` which is 
 
 In this case, since we had async data fetching, an `AsyncChunk` was created as well.
 
+### Zustand
+
+This is a really simple uni-directional data flow model. 
+
+Using the `create` function, we can define a new hook `usePokemonStore` in which we define (and type) the different attributes that we need, and initialize them. Additionally we define some setter functions such as `setPokemon` or `setFilter` in which we define the logic to follow when these changes are taking place.
