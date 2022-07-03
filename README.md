@@ -6,6 +6,11 @@ Quick general project featuring multiple packages and approaches to state manage
 The starting project is just a site with a bunch of different Pokemon fetched from an endpoint (SSR).
 
 The objective is to create a simple Search Bar to search for a specific Pokemon.
+
+- [NextJS State Management](#nextjs-state-management)
+    - [useState](#usestate)
+    - [Context](#context)
+    - [React Query](#react-query)
  
 ### useState
 
@@ -52,4 +57,16 @@ Finally, just wrap the tree with a `QueryClientProvider` initialized with a `Que
  
 --
 
-A better yet more complex way of using React Query is 
+A better yet more complex way of using React Query is using Hydrated State.
+
+When getting the SSR props, we instead create a new `QueryClient` from which to `prefetchQuery` the data from the endpoint. And instead of the usual return, we `dehydrate` the fetched state.
+
+Then, it is required to wrap the tree in a `Hydrate` component that uses the `dehydratedState` from the *pageProps*. 
+
+Data can then be accessed from the page using the same `useQuery` hook.
+
+> The are some cool things happening here:
+> - The page doesn't care about what happened. If the data was **not** prefetched, it will fetch it during the `useQuery`.
+> - Doing multiple `prefetchQuery` becomes easier and cleaner, as they all get stored on the same `QueryClient`.
+
+### Redux
