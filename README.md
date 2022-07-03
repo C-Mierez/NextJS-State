@@ -11,6 +11,11 @@ The objective is to create a simple Search Bar to search for a specific Pokemon.
     - [useState](#usestate)
     - [Context](#context)
     - [React Query](#react-query)
+    - [Redux Toolkit](#redux-toolkit)
+    - [Zustand](#zustand)
+    - [MobX](#mobx)
+    - [Jotai](#jotai)
+    - [RxJS](#rxjs)
  
 ### useState
 
