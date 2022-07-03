@@ -15,6 +15,7 @@ export default function MarkdownHeader(props: Props) {
                     <a
                         href={"https://github.com/C-Mierez/NextJS-State"}
                         target={"_blank"}
+                        rel="noreferrer"
                         className={css.github}
                     >
                         Check out on Github
