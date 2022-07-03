@@ -48,7 +48,8 @@ Then using the hook `useQuery` in which we define a key, the fetch function and 
 
 Then it's just a matter of using the `data` returned by this hook instead of the previous one used for the *useMemo*.
 
-
+Finally, just wrap the tree with a `QueryClientProvider` initialized with a `QueryClient`.
+ 
 --
 
 A better yet more complex way of using React Query is 
