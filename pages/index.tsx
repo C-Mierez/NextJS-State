@@ -22,6 +22,9 @@ const Index: NextPage = () => {
                 <Link href={"/query/home/"}>
                     <div className={css.jump}>React Query</div>
                 </Link>
+                <Link href={"/query-hydrate/home/"}>
+                    <div className={css.jump}>React Query Hydrate</div>
+                </Link>
             </div>
         </>
     );
