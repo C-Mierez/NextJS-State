@@ -1,14 +1,28 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import MarkdownDescription from "../components/MarkdownDescription";
 import css from "../styles/Index.module.css";
+import fs from "fs";
 
-const Index: NextPage = () => {
+// Fetch the README.md content because Im bored and want to show it on the website
+export const getStaticProps: GetStaticProps = () => {
+    const rawReadme = fs.readFileSync(`${process.cwd()}/README.md`, "utf-8");
+
+    return {
+        props: {
+            markdown: rawReadme,
+        },
+    };
+};
+
+const Index = ({ markdown }: { markdown: string }) => {
     return (
         <>
             <Head>
                 <title>NextJS State</title>
             </Head>
+            <MarkdownDescription markdown={markdown}></MarkdownDescription>
             <div className={css.main}>
                 <Link href={"/home/"}>
                     <div className={css.jump}>No State</div>

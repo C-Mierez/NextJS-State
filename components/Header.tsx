@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <div className={css.header}>
             <Link href={"/"}>
-                <h1 style={{ cursor: "pointer" }}>NextJS State Management</h1>
+                <h2 style={{ cursor: "pointer" }}>NextJS State Management</h2>
             </Link>
         </div>
     );
