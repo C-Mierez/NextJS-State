@@ -102,3 +102,11 @@ We create a `pokemonAtom` with the `atom()` function. Then, we can *hydrate* it 
 Similarly, we define all other properties like `filterAtom` and `filteredPokemonAtom`, which can all be treated independently like normal. 
 
 *However*, we can create ***dependencies*** between these atoms, and these are handled automatically. So for `filteredPokemonAtom` we define it as a function whose logic depends on getting other atoms' data, which Jotai understands as a dependency.
+
+### RxJS
+
+This last one is an event-driven system. We create *subjects* that are actually event streams.
+
+We create a `pokemon$` stream using `BehaviorSubject` method and then we just push events into it using the `.next()` method.
+
+To observe de the state we make use of `useObservableState` hook, and then proceed to use the same old *useMemo* from React.

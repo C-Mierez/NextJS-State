@@ -42,6 +42,9 @@ const Index: NextPage = () => {
                         Jotai<div>also fcking amazing???</div>
                     </div>
                 </Link>
+                <Link href={"/rxjs/home/"}>
+                    <div className={css.jump}>RxJS</div>
+                </Link>
             </div>
         </>
     );
