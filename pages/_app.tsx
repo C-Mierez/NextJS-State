@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Header from "../components/Header";
 import css from "../styles/Layout.module.css";
-import { PokemonProvider } from "../src/store";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 

@@ -3,9 +3,9 @@ import { ReactElement, useMemo, useState } from "react";
 import PreviewCard from "../../components/PreviewCard";
 import { Pokemon } from "../../model/Pokemon";
 import css from "../../styles/Home.module.css";
-import { PokemonProvider, usePokemon } from "../../src/store";
+import { PokemonProvider, usePokemon } from "../../src/context/store";
 
-export { getServerSideProps } from "../../src/store";
+export { getServerSideProps } from "../../src/context/store";
 
 export default function ContextHome() {
     const { filter, pokemon, setFilter } = usePokemon();

@@ -5,7 +5,7 @@ import {
     useContext,
     ReactElement,
 } from "react";
-import constants from "../public/constants";
+import constants from "../../public/constants";
 
 interface Pokemon {
     id: number;
