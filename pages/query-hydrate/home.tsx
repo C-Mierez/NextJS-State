@@ -29,11 +29,7 @@ const fetchPokemon = (): Promise<Pokemon[]> => {
 };
 
 export default function QueryHydrateHome() {
-    const {
-        isLoading,
-        error,
-        data: pokemon,
-    } = useQuery("pokemon", fetchPokemon, {
+    const { data: pokemon } = useQuery("pokemon", fetchPokemon, {
         refetchOnMount: false,
         refetchOnWindowFocus: false,
     });
@@ -45,7 +41,7 @@ export default function QueryHydrateHome() {
             pokemon!.filter((p) =>
                 p.name.toLowerCase().includes(filter.toLowerCase())
             ),
-        [filter, pokemon!]
+        [filter, pokemon]
     );
 
     return (
@@ -77,6 +73,7 @@ QueryHydrateHome.getLayout = function getLayout(
     page: ReactElement,
     pageProps: any
 ) {
+    /* eslint-disable */
     const [queryClient] = useState(() => new QueryClient());
 
     return (

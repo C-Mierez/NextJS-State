@@ -70,6 +70,7 @@ export default function QueryHome({
 
 // This is mainly just done here so as to not interfere with other state management solutions
 QueryHome.getLayout = function getLayout(page: ReactElement, pageProps: any) {
+    /* eslint-disable */
     const [queryClient] = useState(() => new QueryClient());
 
     return (
