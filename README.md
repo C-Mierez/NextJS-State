@@ -31,3 +31,24 @@ We define a use function `usePokemon` to obtain the context `PokemonContext` fro
   - For this particular project, instead of wrapping the entire tree, we instead do [Per-Page Layouts](https://nextjs.org/docs/basic-features/layouts#per-page-layouts) to only create a provider for the `ContextHome` page.
 - Then use the `usePokemon` hook from the page. :)
 
+### React Query
+
+So far both of the previous methods have been native to React. 
+
+For React Query, an package is needed:
+```bash
+    yarn add react-query
+```
+
+React Query is a library that is mainly used for data fetching, though it also offers caching, synchronizing and server state management.
+
+In this example, using it was as simple as defining a fetch function `fetchPokemon` that returns the json from the API. 
+
+Then using the hook `useQuery` in which we define a key, the fetch function and some initial params.
+
+Then it's just a matter of using the `data` returned by this hook instead of the previous one used for the *useMemo*.
+
+
+--
+
+A better yet more complex way of using React Query is 

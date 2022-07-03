@@ -19,6 +19,9 @@ const Index: NextPage = () => {
                 <Link href={"/context/home/"}>
                     <div className={css.jump}>Context</div>
                 </Link>
+                <Link href={"/query/home/"}>
+                    <div className={css.jump}>React Query</div>
+                </Link>
             </div>
         </>
     );
