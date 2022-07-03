@@ -25,6 +25,13 @@
 
     font-weight: bold;
     font-size: 1.5em;
+    text-align: center;
+}
+
+.jump > * {
+    font-size: 0.6em;
+    filter: opacity(0.8);
+    font-style: italic;
 }
 
 .jump:hover {

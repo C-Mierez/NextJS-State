@@ -26,10 +26,13 @@ const Index: NextPage = () => {
                     <div className={css.jump}>React Query Hydrate</div>
                 </Link>
                 <Link href={"/redux/home/"}>
-                    <div className={css.jump}>Redux 😄</div>
+                    <div className={css.jump}>Redux</div>
                 </Link>
                 <Link href={"/zustand/home/"}>
-                    <div className={css.jump}>Zustand</div>
+                    <div className={css.jump}>
+                        Zustand
+                        <div>actually amazing wtf?</div>
+                    </div>
                 </Link>
                 <Link href={"/mobx/home/"}>
                     <div className={css.jump}>MobX</div>
